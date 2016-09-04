@@ -2,8 +2,8 @@
 
 mkdir -p build/
 
-#git clone --depth=1 --branch=master https://github.com/ivanceras/curtain build/curtain
-#git clone --depth=1 --branch=master https://github.com/ivanceras/curtain-elm build/curtain-elm
+git clone --depth=1 --branch=master https://github.com/ivanceras/curtain build/curtain
+git clone --depth=1 --branch=master https://github.com/ivanceras/curtain-elm build/curtain-elm
 
 cd build/curtain
 
@@ -16,11 +16,11 @@ cd ../..
 
 cd build/curtain-elm
 
-#make all
+make all
 
 cd ../..
 
-#npm install --save-dev -g electron
+npm install --save-dev -g electron
 
 
 
