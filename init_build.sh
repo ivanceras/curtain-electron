@@ -23,5 +23,15 @@ cd ../..
 npm install --save-dev -g electron
 
 
+## Install electron-packager
+npm install electron-packager -g
+
+# Build for linux
+electron-packager . Curtain --platform=linux --arch=x64
+
+# Build for mac
+electron-packager . Curtain --platform=darwin --arch=x64
 
 
+# Build for windows
+electron-packager . Curtain --platform=win32 --arch=x64
