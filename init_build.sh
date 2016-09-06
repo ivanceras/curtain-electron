@@ -1,5 +1,7 @@
 #!/bin/sh
 
+rm -rf build
+
 mkdir -p build/
 
 git clone --depth=1 --branch=master https://github.com/ivanceras/curtain build/curtain
