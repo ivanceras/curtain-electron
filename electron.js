@@ -15,7 +15,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   // build/curtain-elm/build
-  mainWindow.loadURL(`file://${__dirname}/build/curtain-elm/build/index-electron.html`)
+  mainWindow.loadURL(`file://${__dirname}/build/curtain-elm/build/index.html`)
 
   // Open the DevTools.
  // mainWindow.webContents.openDevTools()
