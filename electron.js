@@ -1,4 +1,5 @@
 const electron = require('electron')
+var server; //iron curtain server
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -25,6 +26,7 @@ function createWindow () {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
+    killServer();
     mainWindow = null
   })
 }
@@ -36,11 +38,8 @@ app.on('ready', createWindow)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
-  // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
-  if (process.platform !== 'darwin') {
+    killServer();
     app.quit()
-  }
 })
 
 app.on('activate', function () {
@@ -53,3 +52,26 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+///Node Commmand Within JS File
+
+var spawn = require('child_process').spawn;
+
+function startServer(){
+   console.log("Starting the webserver..");
+   server = spawn(`${__dirname}/build/iron_curtain`,[],
+                {stdio: ['inherit', 'inherit', 'inherit']}
+            );  
+}
+
+startServer();
+
+function killServer(){
+    console.log("Killing server..");
+    if(server){
+        server.kill();
+        console.log("killed");
+    }else{
+       console.log("There was NO server in the first place!"); 
+    }
+}
