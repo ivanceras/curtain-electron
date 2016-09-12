@@ -16,7 +16,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   // build/curtain-elm/build
-  mainWindow.loadURL(`file://${__dirname}/build/curtain-elm/build/index.html`)
+  mainWindow.loadURL(`file://${__dirname}/index.html`)
 
   // Open the DevTools.
  // mainWindow.webContents.openDevTools()
@@ -59,7 +59,7 @@ var spawn = require('child_process').spawn;
 
 function startServer(){
    console.log("Starting the webserver..");
-   server = spawn(`${__dirname}/build/iron_curtain`,[],
+   server = spawn(`${__dirname}/iron_curtain`,[],
                 {stdio: ['inherit', 'inherit', 'inherit']}
             );  
 }

@@ -4,7 +4,7 @@
   "description": "A generic database admin",
   "main": "electron.js",
   "scripts": {
-    "start": "./build/iron_curtain && node start.js & electron ."
+    "start": "./build/iron_curtain & electron ."
   },
   "repository": {
     "type": "git",
