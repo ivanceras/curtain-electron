@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
+    "url": "git+https://github.com/ivanceras/curtain-electron.git"
   },
   "keywords": [
     "Electron",
